@@ -1,0 +1,131 @@
+//Write a Java program to create a class called "Movie" with title and rating attributes. Modify the attributes using setter methods and print the updated values.
+
+class Movie {
+    private String title;
+    private double rating;
+
+    public Movie(String title, double rating) {
+        this.title = title;
+        this.rating = rating;
+    }
+
+    void getTitle() {
+        System.out.println(title);
+    }
+
+    void getRating() {
+        System.out.println(rating);
+    }
+
+    void setTitle(String title) {
+        this.title = title;
+    }
+
+    void setRating(double rating) {
+        this.rating = rating;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Movie m1 = new Movie("Inception", 8.8);
+        Movie m2 = new Movie("Interstellar", 8.6);
+
+        m1.getTitle();
+        m2.getTitle();
+        m1.getRating();
+        m2.getRating();
+
+        m1.setRating(9.0);
+        m1.getRating();
+    }
+}
+
+
+//Create a class Student with attributes name, rollNumber, and marks. Add a constructor, getters, setters, and a method calculateGrade() to print grades based on marks.
+
+
+class Student {
+    private String name;
+    private int rollNumber;
+    private double marks;
+
+    public Student(String name, int rollNumber, double marks) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.marks = marks;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getRollNumber() {
+        return rollNumber;
+    }
+
+    public void setRollNumber(int rollNumber) {
+        this.rollNumber = rollNumber;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
+
+    public void setMarks(double marks) {
+        this.marks = marks;
+    }
+    public void calculateGrade() {
+        if (marks >= 90) {
+            System.out.println("Grade: A");
+        } else if (marks >= 75) {
+            System.out.println("Grade: B");
+        } else if (marks >= 50) {
+            System.out.println("Grade: C");
+        } else {
+            System.out.println("Grade: F");
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Alice", 101, 92);
+        Student s2 = new Student("Bob", 102, 65);
+        s1.calculateGrade();
+        s2.calculateGrade();
+    }
+}
+
+//Create an abstract class Animal with an abstract method sound(). Implement the sound() method in a subclass Dog and call it in the Main class.
+
+
+abstract class Animal {
+
+    abstract void sound();
+}
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+class Cat extends Animal {
+        void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog(); 
+        Animal myCat = new Cat(); 
+
+        myDog.sound(); 
+        myCat.sound(); 
+    }
+}
+
+
